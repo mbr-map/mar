@@ -1,0 +1,168 @@
+#!/bin/bash
+
+echo " linux commands........"
+1. mkdir -v <dir-name> : To create the empty dir and " -v  " means display the message
+->  mkdir -p <dir-name>: To create the new dir along with the parent dir.
+-> mkdir -m 0764 <dir-name> : To set the newly created the dir file permission.
+-> mkdir mbr {1,2,3,4,5} : TO create the multiple dir at a time.
+2. rmdir <dir-name> : To delete the empty dir.
+-> rmdir mbr {1,2,3,4,5} : To delete the empty dir.
+3. pwd (present working dir ) : To display the current working dir.
+4.cd : change dir
+-> cd ~ : To go home dir.
+-> cd : To go the home dir
+-> cd - : To go to back to previous dir.
+-> cd ../ : one step back.
+-> cd ../.. : two step back.
+5.tree : To display the files and dir in the tree formate.
+6.touch <file-name> : To create the  empty file
+-> touch f1.txt f2.txt f3.txt : to create empty files.
+7.cat <file-name> : To display the content from the file.
+-> cat > f1.txt : To create the new file and along with the display  content.
+-> cat -n f1.txt : To display the content along with the numbers.
+-> cat >> f1.txt : To append the old files with the new files.
+-> cat f1.txt > f2.txt : To copy the file data from the another file.
+8.head : This cmd used to display the by default top ten lines.
+-> head -15 f1.txt : To display content  the top 15 lines from the file.
+9.tail <file-name> : To display the content by default below ten lines.
+-> tail -5 f1.txt : To display the content below 5 lines.
+10.cp <file-name> : This cmd used to copy the file from one dir to another dir.
+-> cp dir/ f1.txt dir2/
+11. mv : This cmd used to rename the file name and also used to move the file from one-dir to the another-dir
+-> mv <file-name><new-filename>
+-> mv dir/f1.txt dir1/
+12.wc : This cmd used count the no of lines , no of words, no of the character in the given file.
+-> wc -c f1.txt
+13.inode number : It is a data structure. It containing all the information about files and dir . newly created files and dir's it will create one unique inode number.
+-> ls -i
+14. ls : To display the all files and dir.
+-> ls -l : To display the long lisiting formate.
+-> ls -a : To display the "." and all hidden files.
+-> ls -h : To display all the human readable formate
+-> ls -r : To display in the reverse order
+-> ls -t : To display based on time stamp.
+-> ls -ltr : To display based on time stamp reverse order.
+-> ls -R : To display the all files in dir and sub-dir also.
+-> ls -ld */ : To display all the dir
+-> ls -l | grep ^d : To display only dir
+-> ls -F : To display only exectuable dir.
+-> ls -s : to display all files and dir in ascending order.
+14.file Permission have three permissions 1.read(r) 2.write(w) 3.execute (x)
+-> files have three sections 1. user-sec 2. group-sec 3. others-sec
+-> chmod : This cmd used to set the file permissions.
+-> chmod u+x f1.txt
+-> chmod 0764 f1.txt
+0 -> no permissions
+1 -> execute only
+2 -> write only
+3 -> write and execute 
+4 -> read only
+5 -> read and execute
+6 -> read and write
+7 -> all permissions
+
+15.umask : To set the file permission for newly created files and dir. 0022
+16.grep : To find the specific string
+-> grep (global regular expression print ) : this cmd used specifiy the line by line if matched content is there means it will print in the given pattern.
+-> grep 'the' f1.txt
+-> grep -i 'the' f1.txt
+-> grep -R 'the' 
+-> grep -c 'the' f1.txt
+-> grep -i 'the' *
+17.sed : This cmd used to specify the specific line
+sed : this cmd used to range
+-> sed : this cmd used to replace the string.
+-> sed -n "12p" f1.txt
+-> sed -n "12,19p" f2.txt
+-> sed 's/the/The/ f3.txt
+-> sed 's/the/THE/g f4.txt
+18.find cmd:
+->  find . -name f1.txt
+-> find ~ -name f1.txt
+-> find . -type f -name f1.txt
+-> find . -type f -name "*.txt"
+-> find . -type f -empty
+-> find . -type d -empty
+-> find . -type -perm 0764 
+-> find . -perm 0765
+-> find . -mtime 1
+-> find / -mtime 1
+-> find . -mtime -1
+-> find . -mmin -10
+19 file : to determine the type of file.
+20.links : hard links and soft-links
+-> hard links and original links have same permission , same inode number, same content
+-> ln f1.txt f1.log
+-> soft links have all diffirent from original file
+ln -s f1.txt sf1.log
+21. echo : This cmd used to display the content.
+22. tr f1.txt : this cmd used to transalate upper case to lower case [A-Z] [a-z] and lower case to upper case [a-z] [A-Z]
+23.sort : This cmd used to sort the data from the file based on ascending order.
+24.chown : this cmd used to change the file owner-ship name
+-> chown mbr f1.txt
+-> chgrp : this cmd used to change the file group-name.
+chgrp wheel f1.txt
+-> chown ec2-user : ec2-user : this cmd used to change all names at a time.
+25. service : This cmd used to find the service running in the server or not.
+-> service <service-name> <options>
+-> options start, service, restart, status
+-> systemctl <options> <service-name>
+26.who : it dispaly the users and id 
+27 w -h : This cmd used to display who loggedin and wt are doing.
+28. users : this cmd used to display the current user working in the system
+29. whoami : This cmd used to display the current user name.
+30. uptime : This cmd used to display the how long server running.
+31. top : This cmd used to display server resources utlizations and it will display the real-time view  like memory usage cpu performance
+32. last : This cmd used to display the how long server running and what time loggedin and wt ar doing in the currernt system.
+33. df (disk free ) report the space or storge and it will display how much utlizied and how much is there.
+34. du ( disk usage) : To estmiate the dir and files usage
+-> du --a
+35.ifconfig : to display the ip address
+36. ps : this cmd used to display the process id
+-> ps -ef : It will display all the process ids and users
+ps -ef --list
+37. kill -9 ps : This cmd used to kill the process if process is not responding.
+38. free : this cmd used display the ram information
+39. man cmd : This cmd used to display full description about cmds
+38: whatis : This cmd used to dispaly the short description about cmds
+39.whereis : this cmd used to find/locate all the binary files and manual files
+40. vi / vim editors : esc : wq -> write and quit , esc : q! -> quit forcefully
+esc : se nu -> set number, esc se nonu
+41.zip / unzip and tar -cvf /tar -xvf : this cmd used to compress the files
+42.cut : to display the specifice string
+43.script cmd : To record the session
+44. tee : this cmd used to redirect console data into file.
+45.wget  :to download the software
+46.curl : This cmd also used to download the softwares.
+47. ping : this cmd used to check the connectivity
+48.wall : This cmd used to send the board cast messages
+49. write : one to one communication
+50.dmidecode : this cmd gives the hardware information.
+51. useradd <user-name> : This cmd used to create the new user.
+52. id <user-name> : This cmd used to check specific user how many groups are there..
+53.groups <user-name> : 
+54.passwd  :This cmd used to set the passwd to the user.
+55.chage : this cmd used for threshold changes to the passwd
+56.su -  :this cmd used to switch from one user to another user
+57. sudo : This cmd used to set the root privalleges to normal user
+-> sudo vi/ etc/sudeors
+-> visudo -> to set user-name ALL=(ALL) ALL
+58.userdel : To delete the user 
+-> userdel -r <username> : to delete the user along with dir also
+59.usermod : This cmd used to lock the user and unlock the user and add the secondary groups to users
+-> usermod -L <user-name>
+-> usermod -U <user-name> 
+-> usermod -a <group-name> <user-name>
+-> usermod -aG <group-name> <user-name>
+60.groupadd <group-name> : To add the new group
+61. groupdel <group-name> : To remove the group
+62.groupmod : this cmd used to change the groupid and also rename the groupname
+-> groupmod -n <group-name> <new-name>
+-> groupmod --gid 1000 -o <group-name>
+63.cal  :This cmd used to display the calender
+64. date : this cmd used to display the date
+65. crontab  :To create the new jobs to make the automate the works
+66.watch cmd used to execute o/p every 2 seconds
+67. ssh  :to login the user
+68. scp  :this cmd used to copy from one server to another server.
+
