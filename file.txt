@@ -1,6 +1,2 @@
 
- " this file update from master branch"
-=======
-This file is updated from developement branch"
-This file is updated from  developement branch"
 
