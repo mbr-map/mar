@@ -1,2 +1,2 @@
 echo " This file contains the DB connection logic
-Im in updating the  master branch "
+Im in updated the  master branch "
