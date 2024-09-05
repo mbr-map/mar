@@ -4,7 +4,7 @@
 echo " Check the divisible 3 and 5 not 15 "
 for (( a==0; a<=100;a++))
 do
-if [ $(( a % 3)) -eq 0 && $(( a % 5 )) -eq 5 ] && [ $(( a % 15 )) ! -eq 15 ]
+	if [ $(( a % 3)) -eq 0  && $(( a % 5 )) -eq 5 ] && [ $(( a % 15 )) ! -eq 15 ]
 then
 echo "$a is divisible of 3 and 5"
 else
