@@ -1,10 +1,6 @@
 echo " This file contains the DB connection logic
-Im in updated the  master branch "
+Im in updated the  master branch
 
-im updating the developement branch"
+echo " Im modifiying and updating code.."
+echo " Im modifiying code in master branch......"
 
-im updating the stage branch....."
-im again updating the stage branch...."
-
-
-im again updating the masterbranch......"
