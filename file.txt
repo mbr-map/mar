@@ -13,3 +13,27 @@ fi
 done
 
 echo " This code is updated from the developement branch"
+
+echo "------------------------------------------------------------"
+
+# write a shell script program by using the funcations..."
+
+echo " you are using the funcations...."
+ add()
+ {
+	 a=10
+	 b=20
+	 add=`expr $a + $b`
+	 echo "added two numbers : $add"
+ }
+ sub ()
+ {
+	 a=100
+	 b=20
+	 sub=`expr $a - $b`
+	 echo " sub of two numbers $sub"
+ }
+ add
+ sub
+
+
