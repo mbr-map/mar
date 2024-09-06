@@ -1,11 +1,4 @@
-echo " i am in master environment "
-echo " i am in developement environment...branch"
-<<mbr
-hello im updating code from master branch......."
-hello im modified code in master branch
-hello im from developement branch im updating code
-hello im updated code from developement branch
-mbr
+
 
 #write a shell script to find the arithmeatic operations by user given values
 
