@@ -7,8 +7,12 @@ echo " Im modifiying code in master branch......"
 I am updating code from master branch......."
 
 #im updating the file in developement branch"
+echo "---------------------------------------------------------"
 
 echo " Updating the new code......"
+
+echo "------------------------------------------"
+
 echo " Check if a number is even or odd? "
 read -p " Enter a number :" num
 if [[ $(( num % 2 )) == 0 ]]
