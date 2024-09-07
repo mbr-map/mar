@@ -1,2 +1,31 @@
 
+#!/bin/bash
 echo " This code is updated from the developement branch"
+echo " updating the new features..."
+# Script to dispaly a menu and taskuser input
+
+
+echo " display a menu and take user input"
+echo "menu"
+echo " 1 Display date and time "
+echo " 2 List files in current directory "
+echo " 3 Display free disk space "
+echo " 4 Display system uptime"
+
+read -p " Please Enter your choice.." choice
+case $choice in
+1)
+date 
+;;
+2)
+ls
+;;
+3)
+df-h
+;;
+4)
+uptime
+;;
+*)
+echo " invalid choice "
+esac
