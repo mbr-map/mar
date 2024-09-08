@@ -1,13 +1,19 @@
+hello im  updating in the stage branch in the remote repo
 #!/bin/bash
 echo " This file contains the DB connection logic"
 #Im in updated the  master branch
 
 echo " Im modifiying and updating code.."
 echo " Im modifiying code in master branch......"
+I am updating code from master branch......."
 
 #im updating the file in developement branch"
+echo "---------------------------------------------------------"
 
 echo " Updating the new code......"
+
+echo "------------------------------------------"
+
 echo " Check if a number is even or odd? "
 read -p " Enter a number :" num
 if [[ $(( num % 2 )) == 0 ]]

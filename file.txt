@@ -1,2 +1,68 @@
+#!/bin/bash
+#write a shell script to check the divisible 3 and 5 not 15 "
 
+echo " Check the divisible 3 and 5 not 15 "
+for (( a==0; a<=100;a++))
+do
+	if [ $(( a % 3)) -eq 0  && $(( a % 5 )) -eq 5 ] && [ $(( a % 15 )) ! -eq 15 ]
+then
+echo "$a is divisible of 3 and 5"
+else
+echo " $a is not divisble of  3 and 5"
+fi
+done
+
+#!/bin/bash
 echo " This code is updated from the developement branch"
+
+echo "------------------------------------------------------------"
+
+# write a shell script program by using the funcations..."
+
+echo " you are using the funcations...."
+ add()
+ {
+	 a=10
+	 b=20
+	 add=`expr $a + $b`
+	 echo "added two numbers : $add"
+ }
+ sub ()
+ {
+	 a=100
+	 b=20
+	 sub=`expr $a - $b`
+	 echo " sub of two numbers $sub"
+ }
+ add
+ sub
+
+
+echo " updating the new features..."
+# Script to dispaly a menu and taskuser input
+
+
+echo " display a menu and take user input"
+echo "menu"
+echo " 1 Display date and time "
+echo " 2 List files in current directory "
+echo " 3 Display free disk space "
+echo " 4 Display system uptime"
+
+read -p " Please Enter your choice.." choice
+case $choice in
+1)
+date 
+;;
+2)
+ls
+;;
+3)
+df-h
+;;
+4)
+uptime
+;;
+*)
+echo " invalid choice "
+esac
