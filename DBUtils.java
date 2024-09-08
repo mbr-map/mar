@@ -1,3 +1,4 @@
+hello im  updating in the stage branch in the remote repo
 #!/bin/bash
 echo " This file contains the DB connection logic"
 #Im in updated the  master branch
