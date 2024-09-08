@@ -62,8 +62,6 @@ echo " linux commands........"
 7 -> all permissions
 
 15.umask : To set the file permission for newly created files and dir. 0022
-16.grep : To find the specific string
--> grep (global regular expression print ) : this cmd used specifiy the line by line if matched content is there means it will print in the given pattern.
 -> grep 'the' f1.txt
 -> grep -i 'the' f1.txt
 -> grep -R 'the' 
