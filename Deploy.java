@@ -1,16 +1,16 @@
 
-hello im from developement branch im updating code
-hello im updated code from developement branch
+echo " hello im from developement branch im updating code "
+echo "hello im updated code from developement branch"
 
-  #write a shell script to print 1 to 10 by using the whileloop
+  echo "write a shell script to print 1 to 10 by using the whileloop"
   echo " while loop staring..."
   a=1
-  while(a -lt 10)
+  while (( $a <=  10 ))
   do
     echo "$a loop"
-  ((a--))
+  (( a++ ))
   done
-  echo "while loop ended
+  echo "while loop ended"
 
 #write a shell script to find the arithmeatic operations by user given values
 
@@ -41,5 +41,45 @@ echo " Modulus of two numbers"
 mod=`expr $a % $b`
 echo " $mod modulus of the three numbers"
 echo " new code is updated..."
+
+echo " ---------------------------------------------------"
+
+echo " im updating the code from master branch..."
+
+echo " write a shell Script to check the file is execute or not if execute file means print the content or else create new file"
+
+read -p " Please enter the filename :" filename
+
+if [[ -f $filename ]]
+then
+echo " $filename this file is existence ...."
+echo " displaying the content inside the file........"
+cat $filename
+else
+echo " $filename this file is not existences.."
+echo " Creating the new file......"
+         touch $filename
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
