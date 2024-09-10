@@ -163,4 +163,4 @@ esc : se nu -> set number, esc se nonu
 66.watch cmd used to execute o/p every 2 seconds
 67. ssh  :to login the user
 68. scp  :this cmd used to copy from one server to another server.
-
+69.history cmd : to see all the commands u used
