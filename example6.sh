@@ -29,3 +29,5 @@ then
 else
 	echo "$filename this file not existed.."
 fi
+
+#Testing the git stash command
