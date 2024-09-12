@@ -1,5 +1,9 @@
 #!/bin/bash
+
 echo " This code updated from developement-branch.."
+
+echo " This code updated from master branch..."
+
 # To check three number greaterthan
 
 read -p " Please enter the firstnumber :" a
