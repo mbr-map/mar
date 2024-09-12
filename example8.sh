@@ -12,4 +12,5 @@ do
 done
 echo " This code updated from developement branch........"
 echo " This code is updated from master branch..."
+echo " To fix the bug in the bugfix branch
 
